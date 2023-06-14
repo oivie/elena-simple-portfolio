@@ -1,0 +1,148 @@
+:root {
+    box-sizing: inherit;
+}
+  
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font: 1em/1.618;
+    font-family: 'Roboto Condensed', sans-serif;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    min-height: 100%;
+    padding: 1%;
+    
+    color: #224;
+/* image from the unsplash.com */
+    background:
+      url(/img/fredd-arguello-vw46QMop-m0-unsplash.jpg)
+      center / cover no-repeat fixed;
+}
+
+/* glassmophism */
+.card {
+    max-width: 800px;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+/* turn off for now */
+    /* max-width: 500px;
+    height: 300px; */
+    padding: 35px;
+
+    border: 1px solid rgba(255, 255, 255, .25);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+
+/* edit how transparent */
+    backdrop-filter: blur(5px);
+}
+
+header {
+    display: grid;
+    align-items: center; 
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 5px;
+}
+
+main {
+    padding-top: 10px;
+}
+
+/* text edit */
+p {
+    margin: 0;
+}
+
+p:not(:last-child) {
+    margin-bottom: 1.5em;
+}
+
+h1 {
+    background: rgb(2,0,36);
+    background-image: linear-gradient(to right top, 
+    #9464cd, #8e5acb, 
+    #874fca, #8144c8, 
+    #7a38c6, #7334c5, 
+    #6c2fc4, #652bc3, 
+    #5b2ec3, #5131c3, 
+    #4533c3, #3835c3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+  
+ul {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+}
+
+
+/* images */
+#portrait {
+    width: 120px;
+    border-radius: 50%;
+}
+
+.roundImg {
+    border-radius: 10px;
+}
+
+/* portfolio */
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+    float: left;
+    width: 20%;
+    padding-right: 15px;
+}
+  
+.column:hover {
+    transition: 0.9s;
+    color: #9464cd;
+}
+
+
+  /* Clear floats after image containers */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .card-footer {
+    font-size: 0.95em;
+    color: #446;
+    padding-top: 10px;
+  }
+
+  @media all and (max-width: 600px) {
+    body {
+        padding: 0.7%;
+    }
+
+    .card {
+        max-width: 100%;
+        padding: 10px;
+        margin: 2%;
+    }
+    
+    p,
+    li {
+        font-size: 12px;
+    }
+
+  }
+
+
+
+  
